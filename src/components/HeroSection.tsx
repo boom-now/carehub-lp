@@ -25,7 +25,7 @@ export default function HeroSection() {
           </h1>
 
           <p
-            className="text-text text-base sm:text-lg leading-relaxed mb-8 max-w-xl mx-auto animate-fade-up"
+            className="text-text text-base sm:text-lg leading-relaxed mb-8 max-w-xl mx-auto animate-fade-up font-bold"
             style={{ animationDelay: "0.3s" }}
           >
             求人媒体の運用から応募者対応・データ分析まで完全代行。
