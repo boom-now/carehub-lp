@@ -7,7 +7,7 @@ export default function HeroSection() {
         style={{ backgroundImage: "url('/hero-img.png')" }}
       />
       {/* 背景オーバーレイ（パステルブルー半透明） */}
-      <div className="absolute inset-0" style={{ backgroundColor: "rgba(240, 245, 250, 0.82)" }} />
+      <div className="absolute inset-0" style={{ backgroundColor: "rgba(240, 245, 250, 0.92)" }} />
 
       <div className="relative max-w-[1100px] mx-auto px-4 sm:px-6 pt-14 sm:pt-20 pb-14">
         <div className="text-center">
@@ -16,7 +16,7 @@ export default function HeroSection() {
           </div>
 
           <h1
-            className="text-3xl sm:text-[44px] lg:text-[52px] font-bold text-text leading-[1.3] mb-5 animate-fade-up"
+            className="text-3xl sm:text-[44px] lg:text-[52px] font-bold text-navy leading-[1.3] mb-5 animate-fade-up"
             style={{ animationDelay: "0.15s" }}
           >
             医療福祉の採用は
@@ -25,7 +25,7 @@ export default function HeroSection() {
           </h1>
 
           <p
-            className="text-text-light text-base sm:text-lg leading-relaxed mb-8 max-w-xl mx-auto animate-fade-up"
+            className="text-text text-base sm:text-lg leading-relaxed mb-8 max-w-xl mx-auto animate-fade-up"
             style={{ animationDelay: "0.3s" }}
           >
             求人媒体の運用から応募者対応・データ分析まで完全代行。
