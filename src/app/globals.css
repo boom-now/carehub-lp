@@ -1,26 +1,98 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: #7bafd4;
+  --color-primary-dark: #5a94bf;
+  --color-primary-light: #deedf7;
+  --color-accent-btn: #e8a0b4;
+  --color-accent-btn-dark: #d4899f;
+  --color-pink: #f2c4d0;
+  --color-pink-light: #fdf0f4;
+  --color-navy: #3a5068;
+  --color-text: #2d3a4a;
+  --color-text-light: #5a6a80;
+  --color-text-muted: #8a9ab0;
+  --color-bg: #f0f5fa;
+  --color-bg-warm: #e8eff8;
+  --color-bg-card: #ffffff;
+  --color-border: #d4e0ed;
+  --color-red: #d47070;
+  --color-red-light: #fdf0f0;
+  --font-sans: var(--font-noto-sans-jp);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans), sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes count-pop {
+  0% { opacity: 0; transform: translateY(16px) scale(0.8); }
+  60% { transform: translateY(-4px) scale(1.05); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out both;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.5s ease-out both;
+}
+
+.animate-count-pop {
+  animation: count-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* Scroll reveal: 初期状態は表示、JSでready付与後に非表示→アニメーション */
+.scroll-reveal.sr-ready {
+  opacity: 0;
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.scroll-reveal.sr-ready.scroll-reveal--up {
+  transform: translateY(32px);
+}
+
+.scroll-reveal.sr-ready.scroll-reveal--left {
+  transform: translateX(-32px);
+}
+
+.scroll-reveal.sr-ready.scroll-reveal--right {
+  transform: translateX(32px);
+}
+
+.scroll-reveal.sr-ready.scroll-reveal--fade {
+  transform: none;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1 !important;
+  transform: translateY(0) translateX(0) !important;
 }
