@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "CareHub | 医療福祉専門 外部人事部サービス",
   description:
     "CareHubは医療福祉特化のHRアウトソーシングサービスです。月額15万円で採用チームを丸ごと。年間40エントリー保証・未達時全額返金。",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
