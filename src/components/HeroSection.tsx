@@ -1,43 +1,37 @@
 export default function HeroSection() {
   return (
-    <section className="bg-bg-warm">
-      <div className="max-w-[1100px] mx-auto px-4 sm:px-6 pt-10 sm:pt-14 pb-14">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-          <div className="flex-1 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 bg-primary-light text-primary text-sm sm:text-base font-bold px-4 py-1.5 rounded-full mb-6 animate-fade-up">
-              医療福祉特化 HRアウトソーシング
-            </div>
+    <section className="relative overflow-hidden">
+      {/* 背景画像 */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/hero-img.png')" }}
+      />
+      {/* 背景オーバーレイ（パステルブルー半透明） */}
+      <div className="absolute inset-0" style={{ backgroundColor: "rgba(240, 245, 250, 0.82)" }} />
 
-            <h1
-              className="text-3xl sm:text-[44px] lg:text-[52px] font-bold text-text leading-[1.3] mb-5 animate-fade-up"
-              style={{ animationDelay: "0.15s" }}
-            >
-              医療福祉の採用は
-              <br />
-              <span className="text-primary">CareHub</span>にまるごとお任せ
-            </h1>
-
-            <p
-              className="text-text-light text-base sm:text-lg leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0 animate-fade-up"
-              style={{ animationDelay: "0.3s" }}
-            >
-              求人媒体の運用から応募者対応・データ分析まで完全代行。
-              <br />
-              月額15万円で御社の外部人事部として採用業務を丸ごと支援します。
-            </p>
+      <div className="relative max-w-[1100px] mx-auto px-4 sm:px-6 pt-14 sm:pt-20 pb-14">
+        <div className="text-center">
+          <div className="inline-flex items-center gap-2 bg-primary-light text-primary text-sm sm:text-base font-bold px-4 py-1.5 rounded-full mb-6 animate-fade-up">
+            医療福祉特化 HRアウトソーシング
           </div>
 
-          <div
-            className="flex-1 max-w-md lg:max-w-lg animate-fade-up"
+          <h1
+            className="text-3xl sm:text-[44px] lg:text-[52px] font-bold text-text leading-[1.3] mb-5 animate-fade-up"
+            style={{ animationDelay: "0.15s" }}
+          >
+            医療福祉の採用は
+            <br />
+            <span className="text-primary">CareHub</span>にまるごとお任せ
+          </h1>
+
+          <p
+            className="text-text-light text-base sm:text-lg leading-relaxed mb-8 max-w-xl mx-auto animate-fade-up"
             style={{ animationDelay: "0.3s" }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/hero-img.png"
-              alt="医療・福祉専門 外部人事部サービス CareHub"
-              className="w-full h-auto mix-blend-screen"
-            />
-          </div>
+            求人媒体の運用から応募者対応・データ分析まで完全代行。
+            <br />
+            月額15万円で御社の外部人事部として採用業務を丸ごと支援します。
+          </p>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto mt-10">
@@ -49,7 +43,7 @@ export default function HeroSection() {
           ].map((stat, i) => (
             <div
               key={stat.label}
-              className="bg-bg-card rounded-xl p-4 text-center shadow-sm animate-count-pop"
+              className="bg-bg-card/90 backdrop-blur-sm rounded-xl p-4 text-center shadow-sm animate-count-pop"
               style={{ animationDelay: `${0.6 + i * 0.1}s` }}
             >
               <p className="text-2xl sm:text-3xl font-bold text-primary leading-none">
